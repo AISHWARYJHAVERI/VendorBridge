@@ -1,0 +1,41 @@
+.print-template { display: none; }
+.print-empty { display: none !important; }
+
+@media print {
+  @page { margin: 0 !important; size: A4 portrait; }
+  .p-toast { display: none !important; }
+  body, html { margin: 0 !important; padding: 0 !important; background: white; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .no-print { display: none !important; }
+  .billing-container { display: block; padding: 0; height: auto; background: white; }
+  .print-template { display: block !important; margin: 0; width: 100%; border: none !important; outline: none !important; }
+  .bill-paper {
+    width: 210mm; min-height: 297mm; margin: 0 auto; padding: 15mm 20mm;
+    color: #000 !important; border: none !important; outline: none !important;
+    box-shadow: none !important; box-sizing: border-box; position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex; flex-direction: column; page-break-after: always;
+  }
+  .print-content-wrapper { display: flex; flex-direction: column; flex: 1; border: none !important; outline: none !important; }
+  .print-header-center { text-align: center; border: none !important; padding-bottom: 25px; margin-bottom: 20px; }
+  .print-jurisdiction { font-size: 14px; letter-spacing: 1px; }
+  .print-company-title { margin: 15px 0 5px 0; font-size: 32px; font-weight: bold; letter-spacing: 2px; }
+  .print-company-subtitle { font-size: 18px; letter-spacing: 1px; }
+  .print-company-address { font-size: 16px; margin-bottom: 5px; }
+  .print-company-contact { font-size: 16px; }
+  .print-meta-row { display: flex; justify-content: space-between; font-size: 16px; font-weight: normal; margin-bottom: 20px; }
+  .print-memo-title { font-weight: bold; font-size: 18px; }
+  .print-customer-name { font-size: 16px; margin-bottom: 25px; }
+  .print-table-container { flex: 1; display: flex; flex-direction: column; }
+  .print-dashed-table { width: 100%; border-collapse: collapse; border-top: 1px dashed #000; }
+  .print-dashed-table th, .print-dashed-table td { padding: 12px 5px; font-size: 15px; color: #000 !important; }
+  .print-dashed-table th { border-bottom: 1px dashed #000; font-weight: bold; text-align: center !important; }
+  .print-dashed-table .col-sr { width: 5%; text-align: center; }
+  .print-dashed-table .col-particulars { width: 45%; text-align: left; }
+  .print-dashed-table .col-year { width: 15%; text-align: center; }
+  .print-dashed-table .col-qty { width: 10%; text-align: center; }
+  .print-dashed-table .col-price { width: 10%; text-align: center; }
+  .print-dashed-table .col-amount { width: 15%; text-align: right; font-weight: normal; }
+  .print-total-row { margin-top: auto; display: flex; justify-content: space-between; padding: 15px 5px; border-top: 1px dashed #000; border-bottom: 1px dashed #000; font-weight: normal; font-size: 16px; }
+  .print-footer-words { margin-top: 15px; font-size: 16px; }
+  .print-footer-signature { text-align: right; margin-top: 60px; font-size: 16px; }
+}

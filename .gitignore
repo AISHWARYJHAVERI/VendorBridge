@@ -1,0 +1,49 @@
+# Node dependencies
+node_modules/
+
+# Build output
+dist/
+.vite/
+
+# Database files - DO NOT COMMIT
+db.json
+src/db.json
+db.json.backup*
+db.sqlite3
+*.db
+
+# Environment files - DO NOT COMMIT
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.development
+
+# Secrets & Keys
+*.key
+*.pem
+*.p12
+*.pfx
+service-account.json
+credentials.json
+secrets.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Firebase cache
+.firebase/
