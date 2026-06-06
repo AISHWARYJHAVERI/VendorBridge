@@ -5,6 +5,9 @@ node_modules/
 dist/
 .vite/
 
+# Ignore nested Billing project
+Billing/
+
 # Database files - DO NOT COMMIT
 db.json
 src/db.json
